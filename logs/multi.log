@@ -1,0 +1,79 @@
+[[34mINFO [0;39m] [2024-11-11 00:08:18] [SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:650] Closing JPA EntityManagerFactory for persistence unit 'default'
+[[34mINFO [0;39m] [2024-11-11 00:08:18] [SpringApplicationShutdownHook] [HikariDataSource:349] HikariPool-1 - Shutdown initiated...
+[[34mINFO [0;39m] [2024-11-11 00:08:18] [SpringApplicationShutdownHook] [HikariDataSource:351] HikariPool-1 - Shutdown completed.
+[[34mINFO [0;39m] [2024-11-11 00:08:19] [main] [MultiApplication:50] Starting MultiApplication using Java 17.0.10 with PID 58987 (/Users/choibyungjae/Desktop/project/0.study/35_multi_tenant/multi/build/classes/java/main started by choibyungjae in /Users/choibyungjae/Desktop/project/0.study/35_multi_tenant/multi)
+[[34mINFO [0;39m] [2024-11-11 00:08:19] [main] [MultiApplication:654] No active profile set, falling back to 1 default profile: "default"
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [RepositoryConfigurationDelegate:143] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [RepositoryConfigurationDelegate:211] Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [TomcatWebServer:111] Tomcat initialized with port 30081 (http)
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [StandardService:173] Starting service [Tomcat]
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [StandardEngine:173] Starting Servlet engine: [Apache Tomcat/10.1.31]
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [[/]:173] Initializing Spring embedded WebApplicationContext
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [ServletWebServerApplicationContext:296] Root WebApplicationContext: initialization completed in 544 ms
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [Version:44] HHH000412: Hibernate ORM core version 6.5.3.Final
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [RegionFactoryInitiator:50] HHH000026: Second-level cache disabled
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [HikariDataSource:109] HikariPool-1 - Starting...
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [HikariPool:554] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@12670e55
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [HikariDataSource:122] HikariPool-1 - Start completed.
+[[34mINFO [0;39m] [2024-11-11 00:08:20] [main] [SpringPersistenceUnitInfo:87] No LoadTimeWeaver setup: ignoring JPA class transformer
+[[34mINFO [0;39m] [2024-11-11 00:08:21] [main] [JtaPlatformInitiator:59] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[[34mINFO [0;39m] [2024-11-11 00:08:21] [main] [LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[[34mINFO [0;39m] [2024-11-11 00:08:21] [main] [QueryEnhancerFactory:49] Hibernate is in classpath; If applicable, HQL parser will be used.
+[[34mINFO [0;39m] [2024-11-11 00:08:21] [main] [TomcatWebServer:243] Tomcat started on port 30081 (http) with context path '/'
+[[34mINFO [0;39m] [2024-11-11 00:08:21] [main] [MultiApplication:56] Started MultiApplication in 1.703 seconds (process running for 2.104)
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [DispatcherServlet:532] Initializing Servlet 'dispatcherServlet'
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [DispatcherServlet:554] Completed initialization in 0 ms
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [TenantInterceptor:27] ### tenantId = a_multi_2
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [UserController:29] ### UserController.findUserName
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [UserService:23] ### UserService.findUserName
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [p6spy:60] #1731251349188 | took 4ms | statement | connection 1| url jdbc:postgresql://localhost:36633/a_multidb_1?currentSchema=public
+select u1_0.username from tb_user_m u1_0 where u1_0.user_id=?
+select u1_0.username from tb_user_m u1_0 where u1_0.user_id=1;
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [p6spy:60] #1731251349191 | took 0ms | commit | connection 1| url jdbc:postgresql://localhost:36633/a_multidb_1?currentSchema=public
+
+;
+[[34mINFO [0;39m] [2024-11-11 00:09:09] [http-nio-0.0.0.0-30081-exec-2] [UserController:31] result = admin
+[[34mINFO [0;39m] [2024-11-11 00:10:43] [SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:650] Closing JPA EntityManagerFactory for persistence unit 'default'
+[[34mINFO [0;39m] [2024-11-11 00:10:43] [SpringApplicationShutdownHook] [HikariDataSource:349] HikariPool-1 - Shutdown initiated...
+[[34mINFO [0;39m] [2024-11-11 00:10:43] [SpringApplicationShutdownHook] [HikariDataSource:351] HikariPool-1 - Shutdown completed.
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [MultiApplication:50] Starting MultiApplication using Java 17.0.10 with PID 59762 (/Users/choibyungjae/Desktop/project/0.study/35_multi_tenant/multi/build/classes/java/main started by choibyungjae in /Users/choibyungjae/Desktop/project/0.study/35_multi_tenant/multi)
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [MultiApplication:654] No active profile set, falling back to 1 default profile: "default"
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [RepositoryConfigurationDelegate:143] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [RepositoryConfigurationDelegate:211] Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [TomcatWebServer:111] Tomcat initialized with port 30081 (http)
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [StandardService:173] Starting service [Tomcat]
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [StandardEngine:173] Starting Servlet engine: [Apache Tomcat/10.1.31]
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [[/]:173] Initializing Spring embedded WebApplicationContext
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [ServletWebServerApplicationContext:296] Root WebApplicationContext: initialization completed in 487 ms
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [Version:44] HHH000412: Hibernate ORM core version 6.5.3.Final
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [RegionFactoryInitiator:50] HHH000026: Second-level cache disabled
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [HikariDataSource:109] HikariPool-1 - Starting...
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [HikariPool:554] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f68756d
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [HikariDataSource:122] HikariPool-1 - Start completed.
+[[34mINFO [0;39m] [2024-11-11 00:10:45] [main] [SpringPersistenceUnitInfo:87] No LoadTimeWeaver setup: ignoring JPA class transformer
+[[34mINFO [0;39m] [2024-11-11 00:10:46] [main] [JtaPlatformInitiator:59] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[[34mINFO [0;39m] [2024-11-11 00:10:46] [main] [LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[[34mINFO [0;39m] [2024-11-11 00:10:46] [main] [QueryEnhancerFactory:49] Hibernate is in classpath; If applicable, HQL parser will be used.
+[[34mINFO [0;39m] [2024-11-11 00:10:46] [main] [TomcatWebServer:243] Tomcat started on port 30081 (http) with context path '/'
+[[34mINFO [0;39m] [2024-11-11 00:10:46] [main] [MultiApplication:56] Started MultiApplication in 1.703 seconds (process running for 2.067)
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [DispatcherServlet:532] Initializing Servlet 'dispatcherServlet'
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [DispatcherServlet:554] Completed initialization in 0 ms
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [TenantInterceptor:27] ### tenantId = a_multi_2
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [UserController:29] ### UserController.findUserName
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [TenantFilterAspect:29] ### TenantFilterAspect tenantId = a_multi_2
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [UserService:23] ### UserService.findUserName
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [UserService:29] ### filter name = tenantFilter
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [p6spy:60] #1731251452963 | took 4ms | statement | connection 1| url jdbc:postgresql://localhost:36633/a_multidb_1?currentSchema=public
+select u1_0.username from tb_user_m u1_0 where u1_0.tenant_id = ? and u1_0.user_id=?
+select u1_0.username from tb_user_m u1_0 where u1_0.tenant_id = 'a_multi_2' and u1_0.user_id=1;
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [p6spy:60] #1731251452965 | took 0ms | commit | connection 1| url jdbc:postgresql://localhost:36633/a_multidb_1?currentSchema=public
+
+;
+[[34mINFO [0;39m] [2024-11-11 00:10:52] [http-nio-0.0.0.0-30081-exec-1] [UserController:31] result = null
+[[34mINFO [0;39m] [2024-11-11 00:12:32] [SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:650] Closing JPA EntityManagerFactory for persistence unit 'default'
+[[34mINFO [0;39m] [2024-11-11 00:12:32] [SpringApplicationShutdownHook] [HikariDataSource:349] HikariPool-1 - Shutdown initiated...
+[[34mINFO [0;39m] [2024-11-11 00:12:32] [SpringApplicationShutdownHook] [HikariDataSource:351] HikariPool-1 - Shutdown completed.
